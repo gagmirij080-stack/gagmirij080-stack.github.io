@@ -1302,23 +1302,20 @@ export default function MotionApp() {
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-sm">
             <a
-              href="mailto:you@example.com"
+              href="mailto:gagik.mirijanyan.03@gmail.com"
               className="rounded-full border border-white/15 px-5 py-2 text-slate-200 transition hover:border-cyan-400/50 hover:text-white"
             >
-              you@example.com
+              gagik.mirijanyan.03@gmail.com
             </a>
             <a
-              href="https://t.me/username"
+              href="https://t.me/Animation0403"
               target="_blank"
               rel="noreferrer"
               className="rounded-full border border-white/15 px-5 py-2 text-slate-200 transition hover:border-cyan-400/50 hover:text-white"
             >
-              @username
+              @Animation0403
             </a>
           </div>
-          <p className="mt-4 text-xs text-slate-500">
-            Контакты-заглушки — замените на свои перед отправкой заявки.
-          </p>
         </section>
       </main>
 
