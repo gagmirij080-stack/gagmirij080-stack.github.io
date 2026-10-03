@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1280px; height: 769px; font-family: Inter, Arial, sans-serif; overflow: hidden; background: #020617; color: #fff; display: flex; }
+.left { width: 54%; padding: 60px 30px 60px 70px; display: flex; flex-direction: column; justify-content: center; position: relative; z-index: 2; }
+.eyebrow { color: #a5b4fc; font-size: 17px; letter-spacing: 0.18em; font-weight: 700; }
+h1 { font-size: 62px; font-weight: 900; line-height: 1.06; margin-top: 26px; }
+.hl { background: #bef264; color: #020617; padding: 0 12px; display: inline-block; }
+.badge { margin-top: 40px; display: inline-block; background: #4f46e5; padding: 15px 32px; border-radius: 999px; font-size: 22px; font-weight: 800; width: fit-content; }
+.right { width: 46%; display: flex; align-items: center; justify-content: center; position: relative; }
+.blob { position: absolute; width: 480px; height: 480px; border-radius: 50%; filter: blur(90px); opacity: 0.5; }
+.browser { width: 520px; background: #0f172a; border: 2px solid #334155; border-radius: 16px; overflow: hidden; box-shadow: 0 30px 70px rgba(0,0,0,0.55); position: relative; z-index: 2; }
+.bbar { height: 40px; background: #1e293b; display: flex; align-items: center; gap: 8px; padding: 0 14px; }
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.shot { height: 540px; overflow: hidden; background: #fff; }
+.shot img { width: 100%; display: block; }
+</style>
+</head>
+<body>
+<div class="left">
+  <div class="eyebrow" id="eyebrow">REACT &middot; TAILWIND</div>
+  <h1 id="title"></h1>
+  <div class="badge" id="badge">FROM $80</div>
+</div>
+<div class="right">
+  <div class="blob" style="background:#4f46e5; top:-90px; right:-70px;"></div>
+  <div class="blob" style="background:#06b6d4; bottom:-110px; right:140px;"></div>
+  <div class="browser">
+    <div class="bbar"><span class="dot" style="background:#f87171"></span><span class="dot" style="background:#fbbf24"></span><span class="dot" style="background:#34d399"></span></div>
+    <div class="shot"><img id="img" src="shots/coffee.png"></div>
+  </div>
+</div>
+<script>
+var p = new URLSearchParams(location.search);
+if (p.get('e')) document.getElementById('eyebrow').textContent = p.get('e');
+if (p.get('b')) document.getElementById('badge').textContent = p.get('b');
+if (p.get('s')) document.getElementById('img').src = 'shots/' + p.get('s');
+var t = (p.get('t') || 'LANDING|PAGE').split('|');
+document.getElementById('title').innerHTML = t[0] + '<br><span class="hl">' + (t[1] || '') + '</span>';
+</script>
+</body>
+</html>

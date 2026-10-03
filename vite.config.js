@@ -10,6 +10,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
+        coffee: resolve(__dirname, "coffee.html"),
         saas: resolve(__dirname, "saas.html"),
         studio: resolve(__dirname, "studio.html"),
       },
